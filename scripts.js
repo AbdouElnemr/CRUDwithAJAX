@@ -20,8 +20,7 @@ $(document).ready(function (){
              'name': name
            //  'comment': comment
             }, success: function (response) {
-                // empty filed after data inserted correctly
-                $('#name').val();
+                 $('#name').val();
               //  $('#comment').val();
                 $('#display_area').append(response);
               
@@ -29,8 +28,7 @@ $(document).ready(function (){
        });
    });
    
-     //post delete  pressed
-   $(document).on('click', '.delete', function (){
+    $(document).on('click', '.delete', function (){
       
        var id = $(this).data('id');
        var $clicked_btn = $(this);
@@ -48,16 +46,14 @@ $(document).ready(function (){
        });
    });
    
-   // when the edit clicked
-   var edit_id;
+    var edit_id;
    var edit_comment;
    $(document).on('click', '.edit', function (){
      
        edit_id = $(this).data('id');
        edit_comment = $(this).parent();
        
-       // get the name and the comment to be edited
-       var name = $(this).siblings('.display_name').text();
+        var name = $(this).siblings('.display_name').text();
        var comment = $(this).siblings('.comment_text').text();
 
        //pace value to input fields
@@ -82,7 +78,7 @@ $(document).ready(function (){
              'name': name,
              'comment': comment
             }, success: function (response) {
-                // empty filed after data inserted correctly
+                
                 $('#name').val();
                 $('#comment').val();
   

@@ -40,7 +40,7 @@ if (isset($_GET['delete']))
 if (isset($_POST['update'])){
     $name = $_POST['name'];
     $id = $_POST['id'];
-    $image = $_POST['comment'];
+    $image = "";//$_POST['comment'];
     $sql = "UPDATE items SET name='{$name}', image='{$image}'WHERE id=".$id;
     if (mysqli_query($conn, $sql)){
         $id = mysqli_insert_id($conn);
